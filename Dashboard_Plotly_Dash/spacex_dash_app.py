@@ -61,7 +61,7 @@ def get_pie_chart(entered_site):
     if entered_site == 'ALL':
         fig = px.pie(spacex_df.groupby('Launch Site')['class'].sum().reset_index(), values='class', 
         names='Launch Site', 
-        title='title')
+        title='Launch Site\'s Success Rate')
         return fig
     else:
         # return the outcomes piechart for a selected site
